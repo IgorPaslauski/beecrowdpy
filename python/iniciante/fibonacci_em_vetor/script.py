@@ -5,11 +5,13 @@ def fibonacci_memo(n, memo={}):
         return 0
     elif n == 1:
         return 1
-    
     memo[n] = fibonacci_memo(n-1, memo) + fibonacci_memo(n-2, memo)
     return memo[n]
 
 # Teste
-n = 60
-resultado = fibonacci_memo(n)
-print(f"O {n}-ésimo número de Fibonacci é: {resultado}")  # Saída: 8
+qtde = int(input())
+
+for i in range(qtde):
+    n = int(input())
+    resultado = fibonacci_memo(n)
+    print(f"Fib({n}) = {resultado}")
